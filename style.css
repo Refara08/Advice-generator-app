@@ -1,0 +1,165 @@
+/* CSS Custom prop */
+:root {
+  --background: hsl(218, 23%, 16%);
+  --font-color: hsl(193, 38%, 86%);
+  --card-color: hsl(217, 19%, 24%);
+  --neon-green: hsl(150, 100%, 66%);
+  --light-cyan: hsl(193, 38%, 86%);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--font-color);
+  font-family: "Monrope", sans-serif;
+  line-height: 1.4rem;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility class */
+
+.attribution {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  display: inline-block;
+  position: relative;
+  transition: all 300ms ease;
+  color: var(--neon-green);
+}
+
+.attribution a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--neon-green);
+  transform: scaleY(1.5) scaleX(1.05) translateY(30%);
+  transition: all 300ms ease;
+  opacity: 0;
+  z-index: -1;
+}
+
+.attribution a:hover {
+  color: var(--background);
+}
+
+.attribution a:hover::after {
+  opacity: 1;
+  transform: scaleY(1.5) scaleX(1.05) translateY(0);
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.medium {
+  font-size: 1.75rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(500px, 80vw);
+  background-color: var(--card-color);
+  border-radius: 15px;
+  transition: all 300ms ease;
+}
+
+.text-group {
+  position: relative;
+  text-align: center;
+  padding: 2rem 2.5rem;
+}
+
+.advice {
+  color: var(--neon-green);
+  margin-bottom: 1.5rem;
+}
+
+.quote {
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+#mobile-devider {
+  margin-bottom: 2.5rem;
+}
+
+#desktop-devider {
+  margin-bottom: 2.5rem;
+}
+
+.btn-randomize {
+  position: absolute;
+  bottom: -20px;
+  background-color: var(--neon-green);
+  padding: 1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: all 300ms ease;
+}
+
+.btn-randomize:hover {
+  -webkit-box-shadow: 0px 0px 30px 0px var(--neon-green);
+  box-shadow: 0px 0px 30px 0px var(--neon-green);
+}
+
+/* Media Querries */
+@media (min-width: 601px) {
+  .card {
+    transform: translate(-50%, -50%);
+  }
+
+  #mobile-devider {
+    display: none;
+  }
+
+  #desktop-devider {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    transform: translate(-50%, -75%);
+  }
+
+  #mobile-devider {
+    display: block;
+  }
+
+  #desktop-devider {
+    display: none;
+  }
+}
