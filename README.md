@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Refara08/Advice-generator-app](https://github.com/Refara08/Advice-generator-app)
+- Live Site URL: [refara08-advice-generator.pages.dev](https://refara08-advice-generator.pages.dev)
 
 ## My process
 
